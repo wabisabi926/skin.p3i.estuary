@@ -75,6 +75,32 @@
 					<onclick>Skin.ToggleSetting(hide_mediaflags)</onclick>
 					<selected>!Skin.HasSetting(hide_mediaflags)</selected>
 				</control>
+				<control type="radiobutton" id="629">
+					<label>$LOCALIZE[31664]</label>
+					<include>DefaultSettingButton</include>
+					<onclick>Skin.ToggleSetting(osd.hidecodecstartuplogos)</onclick>
+					<selected>!Skin.HasSetting(osd.hidecodecstartuplogos)</selected>
+				</control>
+				<control type="button" id="628">
+					<label>$LOCALIZE[31668]</label>
+					<label2>$VAR[CodecLogoPositionLabel2Var]</label2>
+					<include content="DefaultSettingButton"><param name="textoffsetx">70</param></include>
+					<onclick>Skin.SelectBool(31668, 31665|osd.useleftCodecLogos, 31666|osd.usecenterCodecLogos, 31667|osd.userightCodecLogos)</onclick>
+					<enable>!Skin.HasSetting(osd.hidecodecstartuplogos)</enable>
+				</control>
+				<control type="radiobutton" id="631">
+					<label>$LOCALIZE[31670]</label>
+					<include content="DefaultSettingButton"><param name="textoffsetx">70</param></include>
+					<onclick>Skin.ToggleSetting(osd.codeclogoshorizontal)</onclick>
+					<selected>!Skin.HasSetting(osd.codeclogoshorizontal)</selected>
+					<enable>!Skin.HasSetting(osd.hidecodecstartuplogos)</enable>
+				</control>
+				<control type="radiobutton" id="630">
+					<label>$LOCALIZE[31669]</label>
+					<include content="DefaultSettingButton"><param name="textoffsetx">70</param></include>
+					<onclick>Skin.ToggleSetting(osd.codeclogospreview)</onclick>
+					<selected>Skin.HasSetting(osd.codeclogospreview)</selected>
+				</control>
 				<control type="button" id="706">
 					<label>$LOCALIZE[31024]</label>
 					<include>DefaultSettingButton</include>

@@ -1071,4 +1071,9 @@
         <value condition="Integer.IsEqual(VideoPlayer.AudioChannels,9)">FL, FR, FC, LFE, BL, BR, SL, SR, FWL</value>
         <value condition="Integer.IsEqual(VideoPlayer.AudioChannels,10)">FL, FR, FC, LFE, BL, BR, SL, SR, FWL, FWR</value>
     </variable>
+	<variable name="CodecLogoPositionLabel2Var">
+		<value condition="Skin.HasSetting(osd.usecenterCodecLogos)">$LOCALIZE[31666]</value>
+		<value condition="Skin.HasSetting(osd.userightCodecLogos)">$LOCALIZE[31667]</value>
+		<value>$LOCALIZE[31665]</value>
+	</variable>
 </includes>

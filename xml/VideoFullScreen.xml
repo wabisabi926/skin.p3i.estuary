@@ -75,15 +75,20 @@
 		</control>
 		<control type="group" id="2">
 			<depth>DepthOSD+</depth>
-			<visible>String.IsEqual(Player.Process(av.change),1) + !String.IsEqual(VideoPlayer.VideoCodec,av1)</visible>
+			<visible>[String.IsEqual(Player.Process(av.change),1) + !String.IsEqual(VideoPlayer.VideoCodec,av1) + !Skin.HasSetting(osd.hidecodecstartuplogos)] | [Skin.HasSetting(osd.codeclogospreview) + !String.IsEqual(VideoPlayer.VideoCodec,av1)]</visible>
 			<visible>true</visible>
 			<animation type="Hidden">
 				<effect type="fade" start="100" end="0" time="500" tween="sine"/>
 			</animation>
+			<!-- Codec Logo position L/C/R. Right & center offsets differ by orientation: the vertical stack (144w) is narrower than the horizontal pair (308w). Margin 30, screen 1920. -->
+			<animation effect="slide" end="-776,0" time="0" condition="!Skin.HasSetting(osd.usecenterCodecLogos) + !Skin.HasSetting(osd.userightCodecLogos)">Conditional</animation>
+			<animation effect="slide" end="776,0" time="0" condition="Skin.HasSetting(osd.userightCodecLogos) + Skin.HasSetting(osd.codeclogoshorizontal)">Conditional</animation>
+			<animation effect="slide" end="940,0" time="0" condition="Skin.HasSetting(osd.userightCodecLogos) + !Skin.HasSetting(osd.codeclogoshorizontal)">Conditional</animation>
+			<animation effect="slide" end="82,0" time="0" condition="Skin.HasSetting(osd.usecenterCodecLogos) + !Skin.HasSetting(osd.codeclogoshorizontal)">Conditional</animation>
 			<!-- Video Codec Flags -->
 			<include content="VideoCodecFlag">
 				<param name="groupId">40</param><param name="imageId">41</param>
-				<param name="visible">Integer.IsEqual(Player.Process(video.source.hdr.type.raw),0) + String.IsEqual(Player.Process(video.bit.depth),8) + String.IsEqual(Player.Process(amlogic.vs10.mode),Bypass)</param>
+				<param name="visible">[Integer.IsEqual(Player.Process(video.source.hdr.type.raw),0) + String.IsEqual(Player.Process(video.bit.depth),8) + String.IsEqual(Player.Process(amlogic.vs10.mode),Bypass)] | Skin.HasSetting(osd.codeclogospreview)</param>
 				<param name="texture">codecs/sdr8.png</param>
 			</include>
 			<include content="VideoCodecFlag">
@@ -220,11 +225,16 @@
 		</control>
 		<control type="group" id="21">
 			<depth>DepthOSD+</depth>
-			<visible>String.IsEqual(Player.Process(av.change),1) + String.IsEqual(VideoPlayer.VideoCodec,av1)</visible>
+			<visible>[String.IsEqual(Player.Process(av.change),1) + String.IsEqual(VideoPlayer.VideoCodec,av1) + !Skin.HasSetting(osd.hidecodecstartuplogos)] | [Skin.HasSetting(osd.codeclogospreview) + String.IsEqual(VideoPlayer.VideoCodec,av1)]</visible>
 			<visible>true</visible>
 			<animation type="Hidden">
 				<effect type="fade" start="100" end="0" time="500" tween="sine"/>
 			</animation>
+			<!-- Codec Logo position L/C/R. Right & center offsets differ by orientation: the vertical stack (144w) is narrower than the horizontal pair (308w). Margin 30, screen 1920. -->
+			<animation effect="slide" end="-776,0" time="0" condition="!Skin.HasSetting(osd.usecenterCodecLogos) + !Skin.HasSetting(osd.userightCodecLogos)">Conditional</animation>
+			<animation effect="slide" end="776,0" time="0" condition="Skin.HasSetting(osd.userightCodecLogos) + Skin.HasSetting(osd.codeclogoshorizontal)">Conditional</animation>
+			<animation effect="slide" end="940,0" time="0" condition="Skin.HasSetting(osd.userightCodecLogos) + !Skin.HasSetting(osd.codeclogoshorizontal)">Conditional</animation>
+			<animation effect="slide" end="82,0" time="0" condition="Skin.HasSetting(osd.usecenterCodecLogos) + !Skin.HasSetting(osd.codeclogoshorizontal)">Conditional</animation>
 			<!-- Video Codec Flags -->
 			<include content="VideoCodecFlag">
 				<param name="groupId">40</param><param name="imageId">41</param>

@@ -763,3 +763,38 @@ msgstr "System"
 #~ msgctxt "#31138"
 #~ msgid "Player process info"
 #~ msgstr "Player-Informationen"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31664"
+msgid "Show codec logos when video starts"
+msgstr "Codec-Logos beim Videostart anzeigen"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31665"
+msgid "Left"
+msgstr "Links"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31666"
+msgid "Center"
+msgstr "Mitte"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31667"
+msgid "Right"
+msgstr "Rechts"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31668"
+msgid "Position"
+msgstr "Position"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31669"
+msgid "Force-show codec logos (preview)"
+msgstr "Codec-Logos erzwingen (Vorschau)"
+
+#: /xml/SkinSettings.xml
+msgctxt "#31670"
+msgid "Stack codec logos vertically"
+msgstr "Codec-Logos vertikal stapeln"

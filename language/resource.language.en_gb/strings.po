@@ -934,3 +934,38 @@ msgstr ""
 msgctxt "#31663"
 msgid "Show cpu temp and memory usage in top bar"
 msgstr ""
+
+#: /xml/SkinSettings.xml
+msgctxt "#31664"
+msgid "Show codec logos when video starts"
+msgstr ""
+
+#: /xml/SkinSettings.xml
+msgctxt "#31665"
+msgid "Left"
+msgstr ""
+
+#: /xml/SkinSettings.xml
+msgctxt "#31666"
+msgid "Center"
+msgstr ""
+
+#: /xml/SkinSettings.xml
+msgctxt "#31667"
+msgid "Right"
+msgstr ""
+
+#: /xml/SkinSettings.xml
+msgctxt "#31668"
+msgid "Position"
+msgstr ""
+
+#: /xml/SkinSettings.xml
+msgctxt "#31669"
+msgid "Force-show codec logos (preview)"
+msgstr ""
+
+#: /xml/SkinSettings.xml
+msgctxt "#31670"
+msgid "Stack codec logos vertically"
+msgstr ""
