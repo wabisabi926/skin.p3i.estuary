@@ -1016,7 +1016,7 @@
     </variable>
 	<variable name="SubtitleVar">
 		<value condition="String.IsEmpty(VideoPlayer.SubtitlesName)">$INFO[VideoPlayer.SubtitlesLangEx]</value>
-		<value condition="!String.IsEmpty(VideoPlayer.SubtitlesName)">$INFO[VideoPlayer.SubtitlesName]</value>
+		<value>$INFO[VideoPlayer.SubtitlesName]</value>
 	</variable>
 	<variable name="LevelIDVar">
 		<value condition="Integer.IsLess(Player.Process(video.dovi.level),10)">0</value>
